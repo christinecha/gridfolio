@@ -3,9 +3,11 @@
 import React from 'react'
 
 export class Gridfolio extends React.Component{
-  render(
-    <div>
-      Gridfolio
-    </div>
-  )
+  render() {
+    return (
+      <div>
+        Gridfolio
+      </div>
+    )
+  }
 }
