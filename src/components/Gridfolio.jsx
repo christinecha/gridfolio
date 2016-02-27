@@ -5,13 +5,58 @@ import { Folio, FolioStyle } from '../myGridfolio.js'
 
 export class Gridfolio extends React.Component{
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      windowWidth: parseInt(window.innerWidth)
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', () => {
+      this.setState({
+        windowWidth: parseInt(window.innerWidth)
+      })
+    })
+  }
+
+  getKeywords(keywords) {
+    if (!keywords) {
+      return null
+    } else {
+      return keywords.map((keyword, i) => {
+
+        let keywordStyle = {
+          fontSize: FolioStyle.blockKeyword.fontSize + 'px',
+          fontFamily: FolioStyle.blockKeyword.fontFamily,
+          textTransform: FolioStyle.blockKeyword.textTransform,
+          margin: '0 2px',
+          color: FolioStyle.blockKeyword.color,
+          backgroundColor: FolioStyle.blockKeyword.backgroundColor,
+          padding: FolioStyle.blockKeyword.padding,
+          fontWeight: FolioStyle.blockKeyword.fontWeight,
+        }
+
+        return (
+          <div
+            style={ keywordStyle }
+            className="folio-block--keyword"
+            key={ i }>
+            { keyword }
+          </div>
+        )
+      })
+    }
+  }
+
   getBlocks(row) {
     return row.map((block, i) => {
 
       let padding = FolioStyle.blockOuterPadding
-      let blockWidth = (parseInt(window.innerWidth) / row.length) - (padding * 2)
+      let blockWidth = (this.state.windowWidth / row.length) - (padding * 2)
       let blockHeight = blockWidth
       let blockTitlePosition = (blockHeight / 2) - ((block.titleFontSize || FolioStyle.blockTitleFont.fontSize) / 2)
+      let isLinked = block.link ? "linked" : null
 
       let blockStyle = {
         outer: {
@@ -20,7 +65,7 @@ export class Gridfolio extends React.Component{
           padding: padding + 'px',
         },
         inner: {
-          backgroundColor: FolioStyle.blockBackgroundColor,
+          backgroundColor: block.backgroundColor || FolioStyle.blockBackgroundColor,
           backgroundImage: block.image,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -43,11 +88,16 @@ export class Gridfolio extends React.Component{
       return (
         <div
           style={ blockStyle.outer }
-          className="folio-block">
+          className={"folio-block " + isLinked}>
           <div style={ blockStyle.inner }>
-            <div style={ blockStyle.title }>
-              {block.title}
-            </div>
+            <a href={ block.link }>
+              <div style={ blockStyle.title }>
+                { block.title }
+              </div>
+              <div className="folio-block--keywords">
+                { this.getKeywords(block.keywords) }
+              </div>
+            </a>
           </div>
         </div>
       )
@@ -61,6 +111,7 @@ export class Gridfolio extends React.Component{
   }
 
   render() {
+    console.log('rendering')
     return (
       <div>
         { this.getRows() }

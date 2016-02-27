@@ -3,7 +3,25 @@ body, * {
   padding: 0 0 0 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .folio-block {
   display: inline-block;
   vertical-align: top;
+}
+
+.folio-block.linked:hover {
+  opacity: .8;
+}
+
+.folio-block--keywords {
+  margin-top: -25px;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.folio-block--keyword {
+  display: inline-block;
 }
