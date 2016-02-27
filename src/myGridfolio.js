@@ -3,6 +3,7 @@
 import React from 'react'
 
 export const FolioStyle = {
+  blockHeightRatio: 1,
   blockOuterPadding: 20,
   blockInnerPadding: 10,
   blockBackgroundColor: '#f1f1f2',
@@ -27,24 +28,35 @@ export const FolioStyle = {
 }
 
 export const Folio = [
+  [ // Row 0
+    {
+      title: "Digging the gridfolio layout? Make it yours (easy) via my GitHub repo!",
+      brief: "An in-browser and iOS native game written in React and React-Native.",
+      link: null,
+      image: null,
+      titleColor: '#818182',
+      titleFontSize: 16,
+      heightRatio: 0.03,
+    },
+  ],
   [ // Row 1
-    { // Row 1, Item 1
+    {
       title: "Circlematch",
       brief: "An in-browser and iOS native game written in React and React-Native.",
       link: "https://christinecha.github.io/circlematch",
       image: "url('./src/assets/CircleMatch.png')",
       keywords: ["ios", "react", "react-native", "javascript", "html", "css"],
-      isTinted: true
+      isTinted: true,
     },
-    { // Row 1, Item 2
+    {
       title: "Christine Cha",
       brief: null,
       link: null,
-      image: "https://image.com",
-      titleColor: "#b1b1b2",
+      image: null,
+      backgroundColor: "#9BD7E0",
       titleFontSize: 40,
     },
-    { // Row 1, Item 3
+    {
       title: "HOMES (Gilad Hekselman)",
       brief: "Complete 6-panel album artwork.",
       link: "http://www.giladhekselman.com/discography/",
@@ -54,7 +66,7 @@ export const Folio = [
     }
   ],
   [ // Row 2
-    { // Row 1, Item 1
+    {
       title: "Mini Scoop Shop",
       brief: "A tiny eCommerce shop.",
       link: "https://icecreamaccessories.herokuapp.com/",
@@ -62,7 +74,7 @@ export const Folio = [
       keywords: ["html", "css", "Jquery", "stripe", "node", "express"],
       isTinted: true
     },
-    { // Row 1, Item 2
+    {
       title: "NYC Jazz Scraper",
       brief: "A Node + Cheerio web scraper for NYC jazz shows.",
       link: "https://github.com/christinecha/nyc-jazz-shows",
@@ -70,7 +82,7 @@ export const Folio = [
       keywords: ["node", "express", "cheerio"],
       isTinted: true
     },
-    { // Row 1, Item 3
+    {
       title: "RC Thursday Presentations",
       brief: "A little web app to make Thursday Presentations at RC a bit more fun.",
       link: "https://presentations.recurse.com/",
@@ -80,7 +92,7 @@ export const Folio = [
     }
   ],
   [ // Row 3
-    { // Row 3, Item 1
+    {
       title: "MPIA Festival Guide",
       brief: null,
       link: null,
@@ -88,7 +100,7 @@ export const Folio = [
       keywords: ["photoshop", "graphic design", "illustrator", "indesign"],
       isTinted: true
     },
-    { // Row 3, Item 2
+    {
       title: "Kebab King",
       brief: "An android cooking game.",
       link: "https://kebabking.io",
@@ -96,7 +108,7 @@ export const Folio = [
       keywords: ["game design", "illustrator", "ui design"],
       isTinted: true
     },
-    { // Row 3, Item 3
+    {
       title: "Sponsorship Deck (Wellthily)",
       brief: "A little web app to make Thursday Presentations at RC a bit more fun.",
       link: "https://wellthily.com/",
@@ -118,7 +130,7 @@ export const Folio = [
       brief: null,
       link: "https://twitter.com/christinechanyc",
       image: "https://image.com",
-      backgroundColor: '#88DAE2',
+      backgroundColor: '#9BD7E0',
       titleFontSize: 30
     },
     {
@@ -126,7 +138,7 @@ export const Folio = [
       brief: null,
       link: "https://github.com/christinechanyc",
       image: "https://image.com",
-      backgroundColor: '#B3E288',
+      backgroundColor: '#9BD7E0',
       titleFontSize: 30
     },
     {
@@ -134,7 +146,7 @@ export const Folio = [
       brief: null,
       link: "mailto:hello@christinecha.com",
       image: "https://image.com",
-      backgroundColor: '#FFBF7C',
+      backgroundColor: '#9BD7E0',
       titleFontSize: 30
     },
     {
@@ -142,7 +154,7 @@ export const Folio = [
       brief: null,
       link: "https://instagram.com/christinechanyc",
       image: "https://image.com",
-      backgroundColor: '#FFA8B8',
+      backgroundColor: '#9BD7E0',
       titleFontSize: 30
     },
     {

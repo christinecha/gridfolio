@@ -54,7 +54,7 @@ export class Gridfolio extends React.Component{
 
       let padding = FolioStyle.blockOuterPadding
       let blockWidth = (this.state.windowWidth / row.length) - (padding * 2)
-      let blockHeight = blockWidth
+      let blockHeight = blockWidth * (block.heightRatio || FolioStyle.blockHeightRatio)
       let blockTitlePosition = (blockHeight / 2) - ((block.titleFontSize || FolioStyle.blockTitleFont.fontSize) / 2)
       let isLinked = block.link ? "linked" : null
 
