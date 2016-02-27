@@ -1,0 +1,9 @@
+body, * {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.folio-block {
+  display: inline-block;
+  vertical-align: top;
+}
