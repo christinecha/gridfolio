@@ -3,9 +3,11 @@
 import React from 'react'
 
 export const FolioStyle = {
+  bodyMaxWidth: 1200,
   blockHeightRatio: 1,
-  blockOuterPadding: 20,
+  blockOuterPadding: 10,
   blockInnerPadding: 10,
+  blockBorderRadius: '0',
   blockBackgroundColor: '#f1f1f2',
   blockTint: 'rgba(0,0,0,0.4)',
   blockTitleTextAlign: 'center',
@@ -19,24 +21,27 @@ export const FolioStyle = {
   blockKeyword: {
     fontSize: 12,
     fontFamily: 'Geo', // ! Remember to add any font resources to index.html in a link tag.
-    color: '#000',
-    backgroundColor: 'rgba(255,255,255,0.75)',
+    color: '#666',
+    backgroundColor: 'rgba(240,240,240,0.75)',
     padding: '2px 4px',
     fontWeight: 'bold',
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
+    marginTop: -25,
+    marginBottom: 10,
+    textAlign: 'center'
   }
 }
 
 export const Folio = [
   [ // Row 0
     {
-      title: "Digging the gridfolio layout? Make it yours (easy) via my GitHub repo!",
+      title: "Gridfolio: a simple layout for developers >>",
       brief: "An in-browser and iOS native game written in React and React-Native.",
       link: null,
       image: null,
       titleColor: '#818182',
       titleFontSize: 16,
-      heightRatio: 0.03,
+      heightRatio: 0.03
     },
   ],
   [ // Row 1
@@ -55,6 +60,7 @@ export const Folio = [
       image: null,
       backgroundColor: "#9BD7E0",
       titleFontSize: 40,
+      borderRadius: '40%',
     },
     {
       title: "HOMES (Gilad Hekselman)",
@@ -111,7 +117,7 @@ export const Folio = [
     {
       title: "Sponsorship Deck (Wellthily)",
       brief: "A little web app to make Thursday Presentations at RC a bit more fun.",
-      link: "https://wellthily.com/",
+      link: "http://wellthily.com/",
       image: "url('./src/assets/Wellthily.png')",
       keywords: ["photoshop", "graphic design", "illustrator", "indesign"],
       isTinted: true
@@ -123,7 +129,7 @@ export const Folio = [
       brief: null,
       link: null,
       image: null,
-      backgroundColor: 'transparent'
+      backgroundColor: 'transparent',
     },
     {
       title: <i className="fa fa-twitter"></i>,

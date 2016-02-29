@@ -2,20 +2,29 @@
 
 import React from 'react'
 import { Folio, FolioStyle } from '../myGridfolio.js'
+import * as helper from '../helpers.js'
 
 export class Gridfolio extends React.Component{
 
   constructor(props) {
     super(props)
+    let newWidth = parseInt(window.innerWidth)
+    if (newWidth >= FolioStyle.bodyMaxWidth) {
+      newWidth = FolioStyle.bodyMaxWidth
+    }
     this.state = {
-      windowWidth: parseInt(window.innerWidth)
+      windowWidth: newWidth
     }
   }
 
   componentDidMount() {
     window.addEventListener('resize', () => {
+      let newWidth = parseInt(window.innerWidth)
+      if (newWidth >= FolioStyle.bodyMaxWidth) {
+        newWidth = FolioStyle.bodyMaxWidth
+      }
       this.setState({
-        windowWidth: parseInt(window.innerWidth)
+        windowWidth: newWidth
       })
     })
   }
@@ -52,26 +61,43 @@ export class Gridfolio extends React.Component{
   getBlocks(row) {
     return row.map((block, i) => {
 
-      let padding = FolioStyle.blockOuterPadding
+      let padding = block.outerPadding || FolioStyle.blockOuterPadding
       let blockWidth = (this.state.windowWidth / row.length) - (padding * 2)
       let blockHeight = blockWidth * (block.heightRatio || FolioStyle.blockHeightRatio)
       let blockTitlePosition = (blockHeight / 2) - ((block.titleFontSize || FolioStyle.blockTitleFont.fontSize) / 2)
       let isLinked = block.link ? "linked" : null
+      let blockDisplay = "inline-block"
+
+      if (this.state.windowWidth < 900 && row.length <= 4) {
+        padding *= 0.5
+        if (helper.isEven(row.length)) {
+          blockWidth = (this.state.windowWidth / 2) - (padding * 2)
+        } else {
+          blockWidth = (this.state.windowWidth) - (padding * 2)
+        }
+      }
+
+      if (blockHeight < (block.titleFontSize || FolioStyle.blockTitleFont.fontSize) * 2) {
+        blockHeight = (block.titleFontSize || FolioStyle.blockTitleFont.fontSize) * 2
+        blockTitlePosition = (blockHeight / 2) - ((block.titleFontSize || FolioStyle.blockTitleFont.fontSize) / 2)
+      }
 
       let blockStyle = {
         outer: {
           width: blockWidth + 'px',
-          height: blockHeight + 'px',
+          height: blockHeight + (FolioStyle.blockKeyword.marginTop || null) + (FolioStyle.blockKeyword.marginBottom || null) + (FolioStyle.blockKeyword.fontSize || null) + 'px',
           padding: padding + 'px',
+          display: blockDisplay
         },
         inner: {
+          width: blockWidth + 'px',
+          height: blockHeight + 'px',
           backgroundColor: block.backgroundColor || FolioStyle.blockBackgroundColor,
           backgroundImage: block.image,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          width: '100%',
-          height: '100%',
-          textAlign: FolioStyle.blockTitleTextAlign
+          textAlign: FolioStyle.blockTitleTextAlign,
+          borderRadius: block.borderRadius || FolioStyle.blockBorderRadius
         },
         title: {
           color: block.titleColor || FolioStyle.blockTitleFont.color,
@@ -81,12 +107,19 @@ export class Gridfolio extends React.Component{
           fontFamily: FolioStyle.blockTitleFont.fontFamily,
           textTransform: FolioStyle.blockTitleFont.textTransform,
           fontWeight: FolioStyle.blockTitleFont.fontWeight,
-          backgroundColor: block.isTinted ? FolioStyle.blockTint : null
+          backgroundColor: block.isTinted ? FolioStyle.blockTint : null,
+          borderRadius: block.borderRadius || FolioStyle.blockBorderRadius
+        },
+        keywords: {
+          textAlign: FolioStyle.blockKeyword.textAlign || 'center',
+          marginTop: FolioStyle.blockKeyword.marginTop || null + 'px',
+          marginBottom: FolioStyle.blockKeyword.marginBottom || null + 'px',
         }
       }
 
       return (
         <div
+          key={ i }
           style={ blockStyle.outer }
           className={"folio-block " + isLinked}>
           <div style={ blockStyle.inner }>
@@ -94,10 +127,12 @@ export class Gridfolio extends React.Component{
               <div style={ blockStyle.title }>
                 { block.title }
               </div>
-              <div className="folio-block--keywords">
-                { this.getKeywords(block.keywords) }
-              </div>
             </a>
+          </div>
+          <div
+            style={ blockStyle.keywords }
+            className="folio-block--keywords">
+            { this.getKeywords(block.keywords) }
           </div>
         </div>
       )
@@ -106,7 +141,19 @@ export class Gridfolio extends React.Component{
 
   getRows() {
     return Folio.map((row, i) => {
-      return this.getBlocks(row)
+
+      let rowStyle = {
+        maxWidth: FolioStyle.bodyMaxWidth
+      }
+
+      return (
+        <div
+          className="folio-row"
+          style={ rowStyle }
+          key={ i }>
+          { this.getBlocks(row) }
+        </div>
+      )
     })
   }
 
