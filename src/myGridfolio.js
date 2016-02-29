@@ -1,36 +1,9 @@
 "use strict"
 
 import React from 'react'
+import * as style from './myGridfolioStyles'
 
-export const FolioStyle = {
-  bodyMaxWidth: 1200,
-  blockHeightRatio: 1,
-  blockOuterPadding: 10,
-  blockInnerPadding: 10,
-  blockBorderRadius: '0',
-  blockBackgroundColor: '#f1f1f2',
-  blockTint: 'rgba(0,0,0,0.4)',
-  blockTitleTextAlign: 'center',
-  blockTitleFont: {
-    color: '#fff',
-    fontSize: 22,
-    fontFamily: 'Geo', // ! Remember to add any font resources to index.html in a link tag.
-    textTransform: 'uppercase',
-    fontWeight: 'bold'
-  },
-  blockKeyword: {
-    fontSize: 12,
-    fontFamily: 'Geo', // ! Remember to add any font resources to index.html in a link tag.
-    color: '#666',
-    backgroundColor: 'rgba(240,240,240,0.75)',
-    padding: '2px 4px',
-    fontWeight: 'bold',
-    textTransform: 'uppercase',
-    marginTop: -25,
-    marginBottom: 10,
-    textAlign: 'center'
-  }
-}
+export const FolioStyle = style.Playground
 
 export const Folio = [
   [ // Row 0
@@ -41,7 +14,8 @@ export const Folio = [
       image: null,
       titleColor: '#818182',
       titleFontSize: 16,
-      heightRatio: 0.03
+      heightRatio: 0.03,
+      borderRadius: '0'
     },
   ],
   [ // Row 1
@@ -59,25 +33,24 @@ export const Folio = [
       link: null,
       image: null,
       backgroundColor: "#9BD7E0",
-      titleFontSize: 40,
-      borderRadius: '40%',
+      titleFontSize: 60
     },
-    {
-      title: "HOMES (Gilad Hekselman)",
-      brief: "Complete 6-panel album artwork.",
-      link: "http://www.giladhekselman.com/discography/",
-      image: "url('./src/assets/GiladHekselman.jpeg')",
-      keywords: ["photoshop", "graphic design", "photo editing"],
-      isTinted: true
-    }
-  ],
-  [ // Row 2
     {
       title: "Mini Scoop Shop",
       brief: "A tiny eCommerce shop.",
       link: "https://icecreamaccessories.herokuapp.com/",
       image: "url('./src/assets/MiniScoopShop.png')",
       keywords: ["html", "css", "Jquery", "stripe", "node", "express"],
+      isTinted: true
+    }
+  ],
+  [ // Row 2
+    {
+      title: "HOMES (Gilad Hekselman)",
+      brief: "Complete 6-panel album artwork.",
+      link: "http://www.giladhekselman.com/discography/",
+      image: "url('./src/assets/GiladHekselman.jpeg')",
+      keywords: ["photoshop", "graphic design", "photo editing"],
       isTinted: true
     },
     {
