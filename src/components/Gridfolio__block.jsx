@@ -10,8 +10,8 @@ export class Block extends React.Component{
   constructor(props) {
     super(props)
     let newWidth = parseInt(window.innerWidth)
-    if (newWidth >= FolioStyle.bodyMaxWidth) {
-      newWidth = FolioStyle.bodyMaxWidth
+    if (newWidth >= FolioStyle.body.maxWidth) {
+      newWidth = FolioStyle.body.maxWidth
     }
     this.state = {
       windowWidth: newWidth
@@ -21,8 +21,8 @@ export class Block extends React.Component{
   componentDidMount() {
     window.addEventListener('resize', () => {
       let newWidth = parseInt(window.innerWidth)
-      if (newWidth >= FolioStyle.bodyMaxWidth) {
-        newWidth = FolioStyle.bodyMaxWidth
+      if (newWidth >= FolioStyle.body.maxWidth) {
+        newWidth = FolioStyle.body.maxWidth
       }
       this.setState({
         windowWidth: newWidth
@@ -35,19 +35,18 @@ export class Block extends React.Component{
 
     let padding = block.outerPadding || FolioStyle.block.outerPadding
     let blockWidth = (this.state.windowWidth / row.length) - (padding * 2)
-    let blockHeight = blockWidth * (block.heightRatio || FolioStyle.block.heightRatio)
+    let blockHeight = blockWidth * (block.customHeight || FolioStyle.block.heightRatio)
+
+    if (block.customWidth) {
+      blockWidth = this.state.windowWidth * (block.customWidth || 1) - (padding * 2)
+    }
+
     let blockTitlePosition = (blockHeight / 2) - ((block.titleFontSize || FolioStyle.block.title.fontSize) / 2)
     let isLinked = block.link ? "linked" : null
     let blockDisplay = "inline-block"
 
-    if (this.state.windowWidth < 900 && row.length <= 4) {
-      padding *= 0.5
-      if (helper.isEven(row.length)) {
-        blockWidth = (this.state.windowWidth / 2) - (padding * 2)
-      } else {
-        blockWidth = (this.state.windowWidth) - (padding * 2)
-      }
-    }
+    // breakpoints
+    blockWidth = helper.fitToMobile(this.state.windowWidth, row.length, padding, blockWidth)
 
     if (blockHeight < (block.titleFontSize || FolioStyle.block.title.fontSize) * 2) {
       blockHeight = (block.titleFontSize || FolioStyle.block.title.fontSize) * 2
@@ -65,7 +64,7 @@ export class Block extends React.Component{
         width: blockWidth + 'px',
         height: blockHeight + 'px',
         backgroundColor: block.backgroundColor || FolioStyle.block.backgroundColor,
-        backgroundImage: block.image,
+        backgroundImage: block.image || null,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         textAlign: FolioStyle.block.textAlign,
