@@ -17,7 +17,7 @@ export const Default = {
     title: {
       color: '#fff',
       fontSize: 22,
-      fontFamily: 'Geo', // ! Remember to add any font resources to index.html in a link tag.
+      fontFamily: 'Helvetica', // ! Remember to add any font resources to index.html in a link tag.
       textTransform: 'uppercase',
       fontWeight: 'bold'
     },

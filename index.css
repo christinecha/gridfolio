@@ -7,8 +7,14 @@ a {
   text-decoration: none;
 }
 
-.folio-row {
+.folio-row--outer {
   margin: 0 auto;
+  text-align: center;
+}
+
+.folio-row--inner {
+  margin: 0 -10px;
+  text-align: center;
 }
 
 .folio-block {

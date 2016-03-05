@@ -27,10 +27,12 @@ export class Gridfolio extends React.Component{
 
       return (
         <div
-          className="folio-row"
+          className="folio-row--outer"
           style={ rowStyle }
           key={ i }>
-          { this.getBlocks(row) }
+          <div className="folio-row--inner">
+            { this.getBlocks(row) }
+          </div>
         </div>
       )
     })

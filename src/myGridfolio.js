@@ -20,12 +20,20 @@ export const Folio = [
   ],
   [ // Row 1
     {
-      title: "Christine Cha",
+      title: "Ben Scheiner",
       brief: null,
       link: null,
       image: null,
-      backgroundColor: "#9BD7E0",
-      titleFontSize: 40
+      backgroundColor: "red",
+      titleFontSize: 30
+    },
+    {
+      title: "Project Python",
+      brief: "An in-browser and iOS native game written in React and React-Native.",
+      link: "https://christinecha.github.io/circlematch",
+      image: "url('https://www.petfinder.com/wp-content/uploads/2012/11/140272627-grooming-needs-senior-cat-632x475.jpg')",
+      keywords: ["python"],
+      isTinted: true,
     },
     {
       title: "Circlematch",
