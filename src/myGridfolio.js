@@ -5,6 +5,14 @@ import * as style from './myGridfolioStyles'
 
 export const FolioStyle = style.Default
 
+// Notes + Best Practices
+//
+// 1. Try to use rows that are either even or divisible by three in length.
+//    Otherwise, the collapsing-for-mobile function will not be happy.
+// 2. It's best to limit the number of keywords to 5-6 (will display nicely
+//    on almost all block sizes and screen sizes) OR adjust the keywords'
+//    marginTop value in FolioStyle so it will have more space.
+
 export const Folio = [
   [ // Row 0
     {
@@ -20,122 +28,96 @@ export const Folio = [
   ],
   [ // Row 1
     {
-      title: "Ben Scheiner",
-      brief: null,
+      title: "Jane Doe",
       link: null,
       image: null,
-      backgroundColor: "red",
+      backgroundColor: "#00aeef",
       titleFontSize: 30
     },
     {
-      title: "Project Python",
-      brief: "An in-browser and iOS native game written in React and React-Native.",
-      link: "https://christinecha.github.io/circlematch",
-      image: "url('https://www.petfinder.com/wp-content/uploads/2012/11/140272627-grooming-needs-senior-cat-632x475.jpg')",
-      keywords: ["python"],
+      title: "Project #1",
+      link: "https://github.com/christinecha/gridfolio",
+      image: "url('http://facespayneuter.org/wp-content/uploads/2014/08/foundkittens.jpg')",
+      keywords: ["skill", "thing", "language", "library"],
       isTinted: true,
     },
     {
-      title: "Circlematch",
-      brief: "An in-browser and iOS native game written in React and React-Native.",
-      link: "https://christinecha.github.io/circlematch",
-      image: "url('./src/assets/CircleMatch.png')",
-      keywords: ["ios", "react", "react-native", "javascript", "html", "css"],
+      title: "Project #2",
+      link: "https://github.com/christinecha/gridfolio",
+      image: "url('https://www.washingtonpost.com/blogs/local/files/2014/10/4-kittens1.jpg')",
+      keywords: ["skill", "thing", "language", "library"],
       isTinted: true,
     },
     {
-      title: "Mini Scoop Shop",
-      brief: "A tiny eCommerce shop.",
-      link: "https://icecreamaccessories.herokuapp.com/",
-      image: "url('./src/assets/MiniScoopShop.png')",
-      keywords: ["html", "css", "Jquery", "stripe", "node", "express"],
-      isTinted: true
+      title: "Project #3",
+      link: "https://github.com/christinecha/gridfolio",
+      image: "url('https://s3.amazonaws.com/rapgenius/cats-animals-kittens-background.jpg')",
+      keywords: ["skill", "thing", "language", "library"],
+      isTinted: true,
     }
   ],
-  // [
-  //   {
-  //     title: "NYC Jazz Bot",
-  //     brief: "A twitter bot.",
-  //     link: "https://twitter.com/nycjazzapp",
-  //     image: null,
-  //     keywords: ["python", "twitter api"],
-  //     isTinted: true,
-  //     customWidth: 0.2,
-  //     customHeight: 0.5
-  //   },
-  //   {
-  //     title: "Mini Scoop Shop",
-  //     brief: "A tiny eCommerce shop.",
-  //     link: "https://icecreamaccessories.herokuapp.com/",
-  //     image: "url('./src/assets/MiniScoopShop.png')",
-  //     keywords: ["html", "css", "Jquery", "stripe", "node", "express"],
-  //     isTinted: true,
-  //     customWidth: 0.5,
-  //     customHeight: 0.5
-  //   }
-  // ],
-  [ // Row 2
+  [  // Row 2
     {
-      title: "HOMES (Gilad Hekselman)",
-      brief: "Complete 6-panel album artwork.",
-      link: "http://www.giladhekselman.com/discography/",
-      image: "url('./src/assets/GiladHekselman.jpeg')",
-      keywords: ["photoshop", "graphic design", "photo editing"],
-      isTinted: true
+      title: "Project #4",
+      link: "https://github.com/christinecha/gridfolio",
+      image: "url('http://www.tshirtvortex.net/wp-content/uploads/Mister-Mittens-Big-Adventure.jpg')",
+      keywords: ["skill", "thing", "language", "library"],
+      isTinted: true,
     },
     {
-      title: "NYC Jazz Scraper",
-      brief: "A Node + Cheerio web scraper for NYC jazz shows.",
-      link: "https://github.com/christinecha/nyc-jazz-shows",
-      image: "url('./src/assets/Jazz.jpeg')",
-      keywords: ["node", "express", "cheerio"],
-      isTinted: true
+      title: "Project #5",
+      link: "https://github.com/christinecha/gridfolio",
+      image: "url('http://data.whicdn.com/images/79011117/large.jpg')",
+      keywords: ["skill", "thing", "language", "library"],
+      isTinted: true,
     },
     {
-      title: "RC Thursday Presentations",
-      brief: "A little web app to make Thursday Presentations at RC a bit more fun.",
-      link: "https://presentations.recurse.com/",
-      image: "url('./src/assets/RCPresentations.png')",
-      keywords: ["react", "javascript", "html", "css", "firebase"],
-      isTinted: true
-    }
-  ],
-  [ // Row 3
-    {
-      title: "MPIA Festival Guide",
-      brief: null,
-      link: null,
-      image: "url('./src/assets/MPIA_festivalguide.png')",
-      keywords: ["photoshop", "graphic design", "illustrator", "indesign"],
-      isTinted: true
-    },
-    {
-      title: "Kebab King",
-      brief: "An android cooking game.",
-      link: "https://kebabking.io",
-      image: "url('./src/assets/KebabKing.png')",
-      keywords: ["game design", "illustrator", "ui design"],
-      isTinted: true
-    },
-    {
-      title: "Sponsorship Deck (Wellthily)",
-      brief: "A little web app to make Thursday Presentations at RC a bit more fun.",
-      link: "http://wellthily.com/",
-      image: "url('./src/assets/Wellthily.png')",
-      keywords: ["photoshop", "graphic design", "illustrator", "indesign"],
-      isTinted: true
+      title: "Project #6",
+      link: "https://github.com/christinecha/gridfolio",
+      image: "url('https://s-media-cache-ak0.pinimg.com/736x/be/09/56/be09569e65ee1e58e1cdb954da4c6192.jpg')",
+      keywords: ["skill", "thing", "language", "library"],
+      isTinted: true,
     }
   ],
   [ // Row 4
     {
-      title: null,
+      // The <i></i> tags are FontAwesome icons.
+      // Find more here: https://fortawesome.github.io/Font-Awesome/icons/
+      // ! Remember -- if you're copying and pasting -- change "class"
+      // to "className" since this is React-ified HTML.
+      title: <i className="fa fa-twitter"></i>,
       brief: null,
-      link: null,
+      link: "https://twitter.com/christinechanyc",
       image: null,
-      backgroundColor: 'transparent',
+      backgroundColor: '#9BD7E0',
+      titleFontSize: 30
     },
     {
-      title: <i className="fa fa-twitter"></i>,
+      title: "BLOG",
+      brief: null,
+      link: "https://twitter.com/christinechanyc",
+      image: null,
+      backgroundColor: '#9BD7E0',
+      titleFontSize: 30
+    },
+    {
+      title: <i className="fa fa-pinterest-p"></i>,
+      brief: null,
+      link: "https://twitter.com/christinechanyc",
+      image: null,
+      backgroundColor: '#9BD7E0',
+      titleFontSize: 30
+    },
+    {
+      title: <i className="fa fa-flickr"></i>,
+      brief: null,
+      link: "https://twitter.com/christinechanyc",
+      image: null,
+      backgroundColor: '#9BD7E0',
+      titleFontSize: 30
+    },
+    {
+      title: <i className="fa fa-product-hunt"></i>,
       brief: null,
       link: "https://twitter.com/christinechanyc",
       image: null,
@@ -165,13 +147,6 @@ export const Folio = [
       image: null,
       backgroundColor: '#9BD7E0',
       titleFontSize: 30
-    },
-    {
-      title: null,
-      brief: null,
-      link: null,
-      image: null,
-      backgroundColor: 'transparent'
     }
   ]
 ]

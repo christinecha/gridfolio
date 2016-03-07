@@ -2,6 +2,10 @@
 
 import React from 'react'
 
+// This is a default styles object. You can create your own, then import
+// the chosen one into myGridfolio.js (line 6) as style.your_object_name.
+// Or, you can just change this one directly.
+
 export const Default = {
   body: {
     maxWidth: 1200,
@@ -17,7 +21,7 @@ export const Default = {
     title: {
       color: '#fff',
       fontSize: 22,
-      fontFamily: 'Helvetica', // ! Remember to add any font resources to index.html in a link tag.
+      fontFamily: 'Geo', // ! Remember to add any font resources to index.html in a link tag.
       textTransform: 'uppercase',
       fontWeight: 'bold'
     },
