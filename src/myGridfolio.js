@@ -3,7 +3,7 @@
 import React from 'react'
 import * as style from './myGridfolioStyles'
 
-export const FolioStyle = style.Circular
+export const FolioStyle = style.Default
 
 // Notes + Best Practices
 //
