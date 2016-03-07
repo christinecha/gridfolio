@@ -36,9 +36,9 @@ All of the content in your Gridfolio is contained in the `Folio` variable in `my
 ```
 Folio = [
   [ {Block}, {Block}, {Block} ],     // Row of 3 Blocks
-  [ {Block} ],                     // Row of 1 Block
-  [ {Block}, {Block} ],             // Row of 2 Blocks
-  ...                             // etc.
+  [ {Block} ],                       // Row of 1 Block
+  [ {Block}, {Block} ],              // Row of 2 Blocks
+  ...                                // etc.
 ]
 ```
 
@@ -69,4 +69,29 @@ These are essentially Block-specific styles that are overriding the default Styl
 
 #### Customizing the Design
 
-Coming soon.
+As you might have seen in `myGridfolio.js`, we're importing our styles from `myGridfolioStyles.js`. Using the wonderful "destructuring" capabilities of ES6, we can use the style of our choice like so:
+
+```
+export const FolioStyle = style.Default
+```
+
+or, if you create your own new style object:
+
+```
+export const FolioStyle = style.Unique_Style_Name
+```
+
+In `myGridfolioStyles.js`, the structure is basically this:
+
+```
+Unique_Style_Name = {
+  body: {},           // styles for the whole page
+  block: {            // default styles for each Block
+    title: {},        // default styles for each Title
+    keywords: {},     // default styles for each Keyword Container
+    keyword: {}       // default styles for each Keyword
+  }
+}
+```
+
+Remember, you can always override styles within each Block in `myGridfolio.js`.
