@@ -1,7 +1,9 @@
 **Gridfolio**
 ===============
 
-**Gridfolio** is a portfolio generator for developers. More specifically, developers who want to spend time on cool projects, not their portfolio website.
+**Gridfolio** is a super simple React-based portfolio generator.
+
+![alt text]("https://github.com/christinecha/gridfolio/tree/master/src/assets/Gridfolio_preview.png")
 
 -------------
 
