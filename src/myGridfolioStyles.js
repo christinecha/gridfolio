@@ -42,7 +42,7 @@ export const Default = {
   }
 }
 
-export const Playground = {
+export const Circular = {
   body: {
     maxWidth: 1400,
   },
@@ -51,8 +51,8 @@ export const Playground = {
     outerPadding: 20,
     innerPadding: 20,
     borderRadius: '50%',
-    backgroundColor: '#f1f1f2',
-    tint: 'rgba(0,0,0,0.4)',
+    backgroundColor: '#fff',
+    tint: 'rgba(0,0,100,0.4)',
     textAlign: 'center',
     title: {
       color: '#fff',
@@ -62,8 +62,8 @@ export const Playground = {
       fontWeight: 'bold'
     },
     keywords: {
-      marginTop: -180,
-      marginBottom: 180,
+      marginTop: -120,
+      marginBottom: 120,
       textAlign: 'center'
     },
     keyword: {
