@@ -1,7 +1,7 @@
 **Gridfolio**
 ===============
 
-**Gridfolio** is a super simple React-based portfolio generator.
+**Gridfolio** is a super simple React-based portfolio generator. [Live demo >>](http://christinecha.github.io/gridfolio/)
 
 ![alt text](http://christinecha.github.io/gridfolio/src/assets/Gridfolio_preview.gif)
 
