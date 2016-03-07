@@ -24,8 +24,7 @@ $ npm start
 
 
 You should then be able to access Gridfolio at this URL:
-
-```https://localhost:8080/webpack-dev-server```
+https://localhost:8080/webpack-dev-server
 
 -------------
 
