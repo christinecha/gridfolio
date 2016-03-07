@@ -3,7 +3,7 @@
 
 **Gridfolio** is a super simple React-based portfolio generator.
 
-![alt text]("https://raw.githubusercontent.com/christinecha/gridfolio/master/src/assets/Gridfolio_preview.png")
+![alt text]("https://christinecha.github.io/gridfolio/src/assets/Gridfolio_preview.png")
 
 -------------
 
@@ -14,9 +14,6 @@ First, install packages from the root directory:
 ```
 $ npm install
 ```
-
-
-
 
 Next, get the server up and running:
 
