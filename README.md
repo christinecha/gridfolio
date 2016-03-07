@@ -3,7 +3,7 @@
 
 **Gridfolio** is a super simple React-based portfolio generator.
 
-![alt text]("http://christinecha.github.io/gridfolio/src/assets/Gridfolio_preview.png")
+![alt text](http://christinecha.github.io/gridfolio/src/assets/Gridfolio_preview.png)
 
 -------------
 
