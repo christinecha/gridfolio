@@ -9,6 +9,7 @@ export const FolioStyle = style.Default
 //
 // 1. Try to use rows that are either even or divisible by three in length.
 //    Otherwise, the collapsing-for-mobile function will not be happy.
+//
 // 2. It's best to limit the number of keywords to 5-6 (will display nicely
 //    on almost all block sizes and screen sizes) OR adjust the keywords'
 //    marginTop value in FolioStyle so it will have more space.
