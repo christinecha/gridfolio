@@ -25,8 +25,11 @@ export const calculateBlockStyle = (windowWidth, block, row, FolioStyle) => {
 
   if (blockHeight < (block.titleFontSize || FolioStyle.block.title.fontSize) * 2) {
     blockHeight = (block.titleFontSize || FolioStyle.block.title.fontSize) * 2
-    blockTitlePosition = (blockHeight / 2) - ((block.titleFontSize || FolioStyle.block.title.fontSize) / 2)
   }
+
+  if (!block.customHeight && blockHeight <= block.minHeight) blockHeight = block.minHeight
+
+  blockTitlePosition = (blockHeight / 2) - ((block.titleFontSize || FolioStyle.block.title.fontSize) / 2)
 
   let blockHeightIncludingKeywords = blockHeight + parseInt(FolioStyle.block.keywords.marginTop || null) + parseInt(FolioStyle.block.keywords.marginBottom || null) + parseInt(FolioStyle.block.keyword.fontSize * 1.3 || null)
 

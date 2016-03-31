@@ -33,7 +33,8 @@ export const Folio = [
       link: null,
       image: null,
       backgroundColor: "#00aeef",
-      titleFontSize: 30
+      titleFontSize: 30,
+      minHeight: 200
     },
     {
       title: "Project #1",
@@ -41,6 +42,7 @@ export const Folio = [
       image: "url('http://facespayneuter.org/wp-content/uploads/2014/08/foundkittens.jpg')",
       keywords: ["skill", "thing", "language", "library"],
       isTinted: true,
+      minHeight: 200
     },
     {
       title: "Project #2",
@@ -48,6 +50,7 @@ export const Folio = [
       image: "url('https://www.washingtonpost.com/blogs/local/files/2014/10/4-kittens1.jpg')",
       keywords: ["skill", "thing", "language", "library"],
       isTinted: true,
+      minHeight: 200
     },
     {
       title: "Project #3",
@@ -55,6 +58,7 @@ export const Folio = [
       image: "url('https://s3.amazonaws.com/rapgenius/cats-animals-kittens-background.jpg')",
       keywords: ["skill", "thing", "language", "library"],
       isTinted: true,
+      minHeight: 200
     }
   ],
   [  // Row 2
