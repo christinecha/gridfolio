@@ -1,29 +1,19 @@
 **Gridfolio**
 ===============
 
-**Gridfolio** is a super simple React-based portfolio generator. [Live demo >>](http://christinecha.github.io/gridfolio/)
+**Gridfolio** is a super simple portfolio generator. [Live demo >>](http://christinecha.github.io/gridfolio/)
 
-![alt text](http://christinecha.github.io/gridfolio/src/assets/Gridfolio_preview.gif)
+![alt text](http://christinecha.github.io/gridfolio/src/assets/demo.png)
 
 -------------
 
 ## Quickstart
 
-First, install packages from the root directory:
+First, clone the repo:
 
 ```
-$ npm install
+$ git clone https://github.com/christinecha/gridfolio.git
 ```
-
-Next, get the server up and running:
-
-```
-$ npm start
-```
-
-
-You should then be able to access Gridfolio at this URL:
-<https://localhost:8080/webpack-dev-server>
 
 -------------
 
@@ -31,7 +21,7 @@ You should then be able to access Gridfolio at this URL:
 
 #### Adding/Updating Content
 
-All of the content in your Gridfolio is contained in the `Folio` variable in `myGridfolio.js`. Everything follows this simple structure:
+All of the content in your Gridfolio is contained in the `gf_content` variable in `gridfolio.js`. Everything follows this simple structure:
 
 ```
 Folio = [
@@ -48,19 +38,19 @@ Each `Block` is just an object, filled with some basic info:
 {
   title: "My Project",
   link: "https://github.com/christinecha/gridfolio",
-  image: "https://image.com/image.png"
+  imageURL: "https://image.com/image.png"
 }
 ```
 
-You'll see some extra stuff, like:
+and you can add a variable number of styles, like this:
 
 ```
 {
-  ...
-  titleColor: '#818182',
-  titleFontSize: 16,
-  customHeight: 0.03,
-  borderRadius: '0'
+  style: {
+    color: '#818182',
+    fontSize: 16,
+    borderRadius: '50%'
+  }
 }
 ```
 
@@ -69,29 +59,18 @@ These are essentially Block-specific styles that are overriding the default Styl
 
 #### Customizing the Design
 
-As you might have seen in `myGridfolio.js`, we're importing our styles from `myGridfolioStyles.js`. Using the wonderful "destructuring" capabilities of ES6, we can use the style of our choice like so:
+All of your styles hang out in the `gf_styles` variable in `gridfolio.js`.
+
+The structure is basically this:
 
 ```
-export const FolioStyle = style.Default
-```
-
-or, if you create your own new style object:
-
-```
-export const FolioStyle = style.Unique_Style_Name
-```
-
-In `myGridfolioStyles.js`, the structure is basically this:
-
-```
-Unique_Style_Name = {
-  body: {},           // styles for the whole page
-  block: {            // default styles for each Block
-    title: {},        // default styles for each Title
-    keywords: {},     // default styles for each Keyword Container
-    keyword: {}       // default styles for each Keyword
-  }
+var gf_styles = {
+  squareMode: true,   // overall style options
+  innerBlock: {},     // block styles
+  blockTitle: {},     // block title styles
+  keyword: {},        // individual keyword styles
+  keywords: {},       // keyword container styles
 }
 ```
 
-Remember, you can always override styles within each Block in `myGridfolio.js`.
+And voila! 
