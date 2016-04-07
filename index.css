@@ -73,7 +73,9 @@ body {
   .gf-block-5:nth-child(2) { width: 50%; }
   .gf-block-6 { width: 33.33%; }
   .gf-block-7 { width: 14.285%; }
-  .gf-block-8 { width: 12.5%; }
+  .gf-block-8 { width: 25%; }
+  .gf-block-8:nth-child(5) { padding-left: 20px; }
+  .gf-block-8:nth-child(4) { padding-right: 20px; }
   .gf-block-9 { width: 11.11%; }
 }
 
