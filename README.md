@@ -3,7 +3,7 @@
 
 **Gridfolio** is a super simple portfolio generator. [Live demo >>](http://christinecha.github.io/gridfolio/)
 
-![alt text](http://christinecha.github.io/gridfolio/src/assets/demo.png)
+![alt text](http://christinecha.github.io/gridfolio/assets/demo.png)
 
 -------------
 
@@ -73,4 +73,4 @@ var gf_styles = {
 }
 ```
 
-And voila! 
+And voila!
