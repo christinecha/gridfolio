@@ -2,8 +2,9 @@
 ===============
 
 **Gridfolio** is a super simple portfolio generator.
-[Boilerplate demo >>](http://christinecha.com/)
-[Example portfolio >>](http://christinecha.github.io/gridfolio/)
+
+[Example 1 >>](http://christinecha.com/)   
+[Example 2 >>](http://christinecha.github.io/gridfolio/)
 
 ![alt text](http://christinecha.github.io/gridfolio/assets/demo.png)
 
