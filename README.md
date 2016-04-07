@@ -17,14 +17,14 @@ $ git clone https://github.com/christinecha/gridfolio.git
 
 -------------
 
-## Customization (basic)
+## Customization
 
 #### Adding/Updating Content
 
 All of the content in your Gridfolio is contained in the `gf_content` variable in `gridfolio.js`. Everything follows this simple structure:
 
 ```
-Folio = [
+var gf_content = [
   [ {Block}, {Block}, {Block} ],     // Row of 3 Blocks
   [ {Block} ],                       // Row of 1 Block
   [ {Block}, {Block} ],              // Row of 2 Blocks
