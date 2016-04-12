@@ -56,7 +56,8 @@ and you can add [any CSS style properties](https://developer.mozilla.org/en-US/d
     color: "#818182",
     fontSize: "16px",
     borderRadius: "50%",
-    height: "50px"           // you'll need to set customHeight to true
+    height: "50px"           // you'll either need to set customHeight to
+                             // true OR the global squareMode to false
   }
 }
 ```
