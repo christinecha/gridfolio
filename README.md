@@ -56,8 +56,8 @@ style: {
   color: "#818182",
   fontSize: "16px",
   borderRadius: "50%",
-  height: "50px"           // you'll either need to set customHeight to
-                           // true OR the global squareMode to false
+  height: "50px"           // you'd either need to set customHeight to true OR the
+                           // global squareMode to false or else this would get ignored
 }
 ```
 
