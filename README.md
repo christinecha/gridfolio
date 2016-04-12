@@ -74,8 +74,9 @@ The structure is basically this:
 
 ```
 var gf_styles = {
-  squareMode: true,   // if false, each block will try to default to the
-                      // innerBlock.height set below, UNLESS the individual   // block.customHeight is set to true.
+  squareMode: true,   /* If false, each block will try to default to the
+                      innerBlock.height set below, UNLESS the individual
+                      block.customHeight is set to true. */
 
   innerBlock: {},     // block styles
   blockTitle: {},     // block title styles
