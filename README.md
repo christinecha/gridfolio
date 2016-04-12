@@ -68,8 +68,8 @@ The structure is basically this:
 
 ```
 var gf_styles = {
-  squareMode: true,   // if false, will default to specified
-                      // height in block object.
+  squareMode: true,   // if false, each block will try to default to the
+                      // innerBlock.height set below, UNLESS the individual   // block.customHeight is set to true.
 
   innerBlock: {},     // block styles
   blockTitle: {},     // block title styles
