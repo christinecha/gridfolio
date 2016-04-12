@@ -42,9 +42,7 @@ Each `Block` is just an object, filled with some basic info:
   title: "My Project",
   link: "https://github.com/christinecha/gridfolio",
   imageURL: "https://image.com/image.png",
-
-  // this is a unique built-in property
-  customHeight: true         // only include if you want this block to
+  customHeight: true         // only include this if you want this block to
                              // use a unique height, which you'll declare
                              // in its styles (below)
 }
@@ -58,7 +56,7 @@ and you can add [any CSS style properties](https://developer.mozilla.org/en-US/d
     color: "#818182",
     fontSize: "16px",
     borderRadius: "50%",
-    height: "50px"
+    height: "50px"           // you'll need to set customHeight to true
   }
 }
 ```
