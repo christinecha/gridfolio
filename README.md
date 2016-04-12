@@ -84,4 +84,10 @@ var gf_styles = {
 }
 ```
 
-And voila!
+Et voila!
+
+:heart_eyes: :heart_eyes: :heart_eyes: :heart_eyes: :heart_eyes:
+
+Feel free to steal [my personal portfolio styles](http://github.com/christinecha/portfolio) to start, if you want.
+
+![alt text](http://christinecha.github.io/gridfolio/assets/demo_2.png)
