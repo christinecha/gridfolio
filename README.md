@@ -88,6 +88,6 @@ Et voila!
 
 :heart_eyes: :heart_eyes: :heart_eyes: :heart_eyes: :heart_eyes:
 
-Feel free to steal [my personal portfolio styles](http://github.com/christinecha/portfolio) to start, if you want.
+Feel free to steal [my personal portfolio styles](http://github.com/christinecha/portfolio) to start, if you want. It looks like this right now:
 
 ![alt text](http://christinecha.github.io/gridfolio/assets/demo_2.png)
