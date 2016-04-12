@@ -50,7 +50,7 @@ Each `Block` is just an object, filled with some basic info:
 }
 ```
 
-and you can add a variable number of styles, like this:
+and you can add [any CSS style properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference), like this:
 
 ```
 {
@@ -63,7 +63,8 @@ and you can add a variable number of styles, like this:
 }
 ```
 
-These are essentially Block-specific styles that are overriding the default Style Guide. Which is a nice segue to the next section ---
+These are essentially Block-specific styles that are overriding the default Style Guide (a.k.a. ```gf_styles```). Which is a nice segue to the next section ---
+
 
 
 #### Customizing the Design
