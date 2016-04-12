@@ -41,7 +41,12 @@ Each `Block` is just an object, filled with some basic info:
 {
   title: "My Project",
   link: "https://github.com/christinecha/gridfolio",
-  imageURL: "https://image.com/image.png"
+  imageURL: "https://image.com/image.png",
+
+  // this is a unique built-in property
+  customHeight: true         // only include if you want this block to
+                             // use a unique height, which you'll declare
+                             // in its styles (below)
 }
 ```
 
@@ -50,9 +55,10 @@ and you can add a variable number of styles, like this:
 ```
 {
   style: {
-    color: '#818182',
-    fontSize: 16,
-    borderRadius: '50%'
+    color: "#818182",
+    fontSize: "16px",
+    borderRadius: "50%",
+    height: "50px"
   }
 }
 ```
