@@ -68,7 +68,9 @@ The structure is basically this:
 
 ```
 var gf_styles = {
-  squareMode: true,   // overall style options
+  squareMode: true,   // if false, will default to specified
+                      // height in block object.
+
   innerBlock: {},     // block styles
   blockTitle: {},     // block title styles
   keyword: {},        // individual keyword styles
