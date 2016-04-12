@@ -42,23 +42,22 @@ Each `Block` is just an object, filled with some basic info:
   title: "My Project",
   link: "https://github.com/christinecha/gridfolio",
   imageURL: "https://image.com/image.png",
-  customHeight: true         // only include this if you want this block to
+  customHeight: true,        // only include this if you want this block to
                              // use a unique height, which you'll declare
                              // in its styles (below)
+  style: { ... }
 }
 ```
 
-and you can add [any CSS style properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference), like this:
+and you can add [any CSS style properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference) into the style object, like this:
 
 ```
-{
-  style: {
-    color: "#818182",
-    fontSize: "16px",
-    borderRadius: "50%",
-    height: "50px"           // you'll either need to set customHeight to
-                             // true OR the global squareMode to false
-  }
+style: {
+  color: "#818182",
+  fontSize: "16px",
+  borderRadius: "50%",
+  height: "50px"           // you'll either need to set customHeight to
+                           // true OR the global squareMode to false
 }
 ```
 
