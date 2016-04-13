@@ -20,6 +20,7 @@ body {
   box-sizing: border-box;
   display: inline-block;
   vertical-align: top;
+  cursor: default;
 }
 
 .gf-block:first-child { padding-left: 20px; }
