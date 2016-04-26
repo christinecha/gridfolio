@@ -26,6 +26,9 @@ blockKeywordsProto.className = "gf-block--inner--keywords"
 var blockKeywordProto = document.createElement("div")
 blockKeywordProto.className = "gf-block--inner--keyword"
 
+var spanProto = document.createElement("span")
+spanProto.className = "gf-block--inner--span"
+
 // Global functions
 function squareify() {
   var blocks = document.querySelectorAll(".gf-block.square")
@@ -70,6 +73,7 @@ requirejs(["gridfolio"], function() {
         if (block.link) {
           link.href = block.link
           link.appendChild(blockTitle)
+          link.appendChild(spanProto.cloneNode())
           blockTitle = link
         }
 
