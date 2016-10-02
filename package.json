@@ -5,6 +5,7 @@
   "main": "dist/gridfolio.js",
   "scripts": {
     "build": "babel src/gridfolio.js --out-file dist/gridfolio.js",
+    "dev": "babel src/gridfolio.js --out-file dist/gridfolio.js --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

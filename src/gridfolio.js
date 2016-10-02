@@ -34,12 +34,12 @@ class Gridfolio {
 
   /**~~~~~~~~~~~~ METHODS THAT STORE SHIT ~~~~~~~~~~~~**/
 
-  generateElement(tag, classname, isWrapped = false) {
+  generateElement(tag, classname, wrapperTag = null) {
     const $element = document.createElement(tag)
     $element.classList.add(classname)
 
-    if (isWrapped) {
-      const $wrapper = this.generateElement(tag, classname + '-wrapper')
+    if (wrapperTag) {
+      const $wrapper = this.generateElement(wrapperTag, classname + '-wrapper')
       $wrapper.appendChild($element)
       return $wrapper
     }
@@ -50,17 +50,19 @@ class Gridfolio {
   // Cache a block so you can just clone off of it later.
   storePrototypeBlock() {
     this.$_block        = this.generateElement('div', 'gridfolio--block')
+    this.$_blockLink    = this.generateElement('a', 'gridfolio--block-link')
     this.$_blockContent = this.generateElement('div', 'gridfolio--block-content')
 
-    this.$_title        = this.generateElement('h2', 'gridfolio--block-title', true)
-    this.$_description  = this.generateElement('p', 'gridfolio--block-description', true)
-    this.$_tags         = this.generateElement('div', 'gridfolio--block-tags', true)
+    this.$_title        = this.generateElement('h2', 'gridfolio--block-title', 'div')
+    this.$_description  = this.generateElement('p', 'gridfolio--block-description', 'div')
+    this.$_tags         = this.generateElement('div', 'gridfolio--block-tags', 'div')
 
     this.$_blockContent.appendChild(this.$_title)
     this.$_blockContent.appendChild(this.$_description)
     this.$_blockContent.appendChild(this.$_tags)
 
-    this.$_block.appendChild(this.$_blockContent)
+    this.$_blockLink.appendChild(this.$_blockContent)
+    this.$_block.appendChild(this.$_blockLink)
   }
 
   // Figure out which breakpoint you're at, and store that and the
@@ -116,6 +118,7 @@ class Gridfolio {
   renderBlocks() {
     this.blocks.forEach((block, i) => {
       const $block = this.$_block.cloneNode(true)
+      const $link = $block.querySelector('.gridfolio--block-link')
       const $title = $block.querySelector('.gridfolio--block-title')
       const $description = $block.querySelector('.gridfolio--block-description')
       const $tags = $block.querySelector('.gridfolio--block-tags')
@@ -124,6 +127,7 @@ class Gridfolio {
 
       if (block.title) $title.innerHTML = block.title
       if (block.description) $description.innerHTML = block.description
+      if (block.url) $link.href = block.url
 
       if (block.tags) {
         block.tags.forEach(tag => {

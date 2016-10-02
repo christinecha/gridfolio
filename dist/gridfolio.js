@@ -43,13 +43,13 @@ var Gridfolio = function () {
   _createClass(Gridfolio, [{
     key: 'generateElement',
     value: function generateElement(tag, classname) {
-      var isWrapped = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+      var wrapperTag = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
 
       var $element = document.createElement(tag);
       $element.classList.add(classname);
 
-      if (isWrapped) {
-        var $wrapper = this.generateElement(tag, classname + '-wrapper');
+      if (wrapperTag) {
+        var $wrapper = this.generateElement(wrapperTag, classname + '-wrapper');
         $wrapper.appendChild($element);
         return $wrapper;
       }
@@ -63,17 +63,19 @@ var Gridfolio = function () {
     key: 'storePrototypeBlock',
     value: function storePrototypeBlock() {
       this.$_block = this.generateElement('div', 'gridfolio--block');
+      this.$_blockLink = this.generateElement('a', 'gridfolio--block-link');
       this.$_blockContent = this.generateElement('div', 'gridfolio--block-content');
 
-      this.$_title = this.generateElement('h2', 'gridfolio--block-title', true);
-      this.$_description = this.generateElement('p', 'gridfolio--block-description', true);
-      this.$_tags = this.generateElement('div', 'gridfolio--block-tags', true);
+      this.$_title = this.generateElement('h2', 'gridfolio--block-title', 'div');
+      this.$_description = this.generateElement('p', 'gridfolio--block-description', 'div');
+      this.$_tags = this.generateElement('div', 'gridfolio--block-tags', 'div');
 
       this.$_blockContent.appendChild(this.$_title);
       this.$_blockContent.appendChild(this.$_description);
       this.$_blockContent.appendChild(this.$_tags);
 
-      this.$_block.appendChild(this.$_blockContent);
+      this.$_blockLink.appendChild(this.$_blockContent);
+      this.$_block.appendChild(this.$_blockLink);
     }
 
     // Figure out which breakpoint you're at, and store that and the
@@ -143,6 +145,7 @@ var Gridfolio = function () {
 
       this.blocks.forEach(function (block, i) {
         var $block = _this3.$_block.cloneNode(true);
+        var $link = $block.querySelector('.gridfolio--block-link');
         var $title = $block.querySelector('.gridfolio--block-title');
         var $description = $block.querySelector('.gridfolio--block-description');
         var $tags = $block.querySelector('.gridfolio--block-tags');
@@ -151,6 +154,7 @@ var Gridfolio = function () {
 
         if (block.title) $title.innerHTML = block.title;
         if (block.description) $description.innerHTML = block.description;
+        if (block.url) $link.href = block.url;
 
         if (block.tags) {
           block.tags.forEach(function (tag) {

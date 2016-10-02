@@ -21,6 +21,7 @@ var gridfolio = new Gridfolio({
     {
       title: 'Project Title',
       description: 'My project is awesome.',
+      url: 'http://christinecha.github.io/gridfolio/',
       tags: ['html', 'css', 'javascript'],
 
       // these classes correspond to CSS selectors in themes/gridfolio-textures.css.
@@ -30,6 +31,7 @@ var gridfolio = new Gridfolio({
       title: 'Project Title',
       description: 'My project is awesome.',
       tags: ['html', 'css', 'javascript'],
+      url: 'http://christinecha.github.io/gridfolio/',
 
       // these classes correspond to CSS selectors in themes/gridfolio-textures.css.
       classname: 'class-two solid-pink dark-bg'
@@ -38,6 +40,7 @@ var gridfolio = new Gridfolio({
       title: 'Project Title',
       description: 'My project is awesome.',
       tags: ['html', 'css', 'javascript'],
+      url: 'http://christinecha.github.io/gridfolio/',
 
       // these classes correspond to CSS selectors in themes/gridfolio-textures.css.
       classname: 'class-three solid-yellow dark-bg'

@@ -56,6 +56,7 @@ function generateGridfolio(theme) {
     blocks.push({
       title: 'Project Title',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      url: 'http://christinecha.github.io/gridfolio/',
       tags: ['html', 'css', 'javascript'],
       classname: textures[theme] ? textures[theme][i % textures[theme].length] : ''
     })
@@ -65,27 +66,16 @@ function generateGridfolio(theme) {
   var gridfolio = new Gridfolio({
 
     container: '#gridfolio--container',
-
     options: {
-
       animateIntoView: true,
-
-      // Breakpoints are mobile first.
       breakpoints: [
-        // That means the grid is 1 block wide from 0px wide to 768px wide
         { minWidth: 0, gridWidth: 1 },
-        // 3 blocks wide from 768px wide to 1440px wide
         { minWidth: 500, gridWidth: 2 },
-        // and so on
         { minWidth: 900, gridWidth: 3 },
-        // and so forth.
         { minWidth: 1300, gridWidth: 4 }
       ],
-
       scaleFonts: true
-
     },
-
     blocks: blocks
   })
 }
