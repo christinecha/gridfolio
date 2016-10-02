@@ -4,34 +4,35 @@ Gridfolio
 
 A library to generate simple, stylish, responsive, and easily customizable grid-based portfolios.
 
+#### DEMO: http://christinecha.github.io/gridfolio/
+
+1. [Get Started](#get-started)
+2. [Usage](#usage)
+3. [Special Features](#special-features)
+4. [License](#license)
+
+
+
+
 ----
 
-### Get Started
+## Get Started
 
 The easiest way to start is to just clone the repo. Then, of course, you can pick and choose which files you want to use.
 ```
 $ git clone https://github.com/christinecha/gridfolio.git
-
-$ cd gridfolio
-$ open index.html
 ```
 
-Now, you should be looking at the demo site in your browser. Easy as pie!
-
-Next, let's see how to use this in your own project. First, include the script and the base CSS - probably wanna do something like this:
+Next, let's see how to use this in your own project. First, include the script and the base CSS in your HTML.
 
 ````html
-<head>
   <link href="/your_path/base/gridfolio.css" rel="stylesheet" type="text/css">
-</head>
-
-<body>
-  // Your HTML stuff
+````
+````html
   <script src="/your_path/base/gridfolio.js"></script>
-</body>
 ````
 
-### Usage
+## Usage
 
 Now you'll have access to the `Gridfolio` class, which can be used thusly:
 
@@ -94,7 +95,7 @@ Isn't that easy?
 ... well, if it isn't, let me know. :) Have fun!!!
 
 
-### Special Features
+## Special Features
 
 Let's talk about some more fancy shit. THEMES! That's right, I built some simple CSS themes for y'all, and it's **so easy** to implement (or make your own).
 
@@ -129,4 +130,16 @@ The config finds the DOM Element `.gridfolio` and sets attribute `'data-theme'` 
 
 **Which means that you can actually set 'theme' to whatever name you want, and then implement your own theme with custom CSS suuuuuper easily.**
 
-<3
+<3 - CHA
+
+----
+
+## License
+
+The MIT License (MIT) Copyright (c) 2016 Christine Cha
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
