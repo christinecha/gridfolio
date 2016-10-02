@@ -1,8 +1,8 @@
 {
   "name": "gridfolio",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A simple, stylish, responsive, and customizable grid-based portfolio library.",
-  "main": "dist/gridfolio.min.js",
+  "main": "dist/gridfolio.js",
   "scripts": {
     "build": "babel src/gridfolio.js --out-file dist/gridfolio.js",
     "test": "echo \"Error: no test specified\" && exit 1"
