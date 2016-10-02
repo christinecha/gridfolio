@@ -1,6 +1,6 @@
 Gridfolio
 =====
-**New and (seriously) improved.**
+[![gridfolio on NPM](https://img.shields.io/npm/v/gridfolio.svg?style=flat-square)](https://www.npmjs.com/package/gridfolio)
 
 A library to generate simple, stylish, responsive, and easily customizable grid-based portfolios.
 
@@ -29,10 +29,10 @@ $ git clone https://github.com/christinecha/gridfolio.git
 Next, let's see how to use this in your own project. First, include the script and the base CSS in your HTML.
 
 ````html
-  <link href="/your_path/base/gridfolio.css" rel="stylesheet" type="text/css">
+  <link href="/your_path/dist/gridfolio.css" rel="stylesheet" type="text/css">
 ````
 ````html
-  <script src="/your_path/base/gridfolio.js"></script>
+  <script src="/your_path/dist/gridfolio.js"></script>
 ````
 
 ## Usage
@@ -106,20 +106,20 @@ Let's talk about some more fancy shit. THEMES! That's right, I built some simple
 Import whatever CSS theme file you want (after the base one, of course), and then just tack on the theme in your Gridfolio config.
 ````
 <head>
-  <link href="/your_path/base/gridfolio.css" rel="stylesheet" type="text/css">
+  <link href="/your_path/dist/gridfolio.css" rel="stylesheet" type="text/css">
   <link href="/your_path/themes/gridfolio-warhol.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
   // Your HTML stuff
-  <script src="/your_path/base/gridfolio.js"></script>
+  <script src="/your_path/dist/gridfolio.js"></script>
 
   <script>
     var gridfolio = new Gridfolio({
       container: 'body',
       options: {
         animateIntoView: true,
-        breakpoints: [],
+        breakpoints: [ /* your breakpoints */ ],
         scaleFonts: true,
         theme: 'warhol'
       },

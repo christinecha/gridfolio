@@ -1,0 +1,33 @@
+{
+  "name": "gridfolio",
+  "version": "2.0.0",
+  "description": "A simple, stylish, responsive, and customizable grid-based portfolio library.",
+  "main": "dist/gridfolio.min.js",
+  "scripts": {
+    "build": "babel src/gridfolio.js --out-file dist/gridfolio.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christinecha/gridfolio.git"
+  },
+  "keywords": [
+    "css",
+    "portfolio",
+    "javascript",
+    "library",
+    "simple",
+    "generator",
+    "vanilla"
+  ],
+  "author": "ccha <ccha@squarespace.com> (https://stash.nyc.squarespace.net/users/ccha)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/christinecha/gridfolio/issues"
+  },
+  "homepage": "https://github.com/christinecha/gridfolio#readme",
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0"
+  }
+}
