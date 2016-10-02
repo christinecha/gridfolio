@@ -4,7 +4,9 @@ Gridfolio
 
 A library to generate simple, stylish, responsive, and easily customizable grid-based portfolios.
 
-#### DEMO: http://christinecha.github.io/gridfolio/
+#### DEMO: https://christinecha.github.io/gridfolio/
+![Gridfolio Demo Gif](https://christinecha.github.io/gridfolio/assets/demo.gif "Gridfolio Demo Gif")
+
 
 1. [Get Started](#get-started)
 2. [Usage](#usage)
