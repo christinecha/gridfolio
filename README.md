@@ -6,7 +6,7 @@ A library to generate simple, stylish, responsive, and easily customizable grid-
 
 #### DEMO: http://christinecha.github.io/gridfolio/
 
-![Gridfolio Demo Gif](http://christinecha.github.io/gridfolio/assets/demo.gif)
+![Gridfolio Demo Gif](https://media.giphy.com/media/l2Sq3sTZemUkQpUli/giphy.gif)
 
 
 1. [Get Started](#get-started)
