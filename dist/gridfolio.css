@@ -4,10 +4,15 @@
   padding: 0 0;
   border: none;
   font-family: 'Work', 'Helvetica', sans-serif;
+  text-decoration: none;
 }
 
 *:focus {
   outline: none;
+}
+
+a {
+  color: inherit;
 }
 
 /* Gridfolio Base Styles */
