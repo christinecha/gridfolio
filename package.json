@@ -1,6 +1,6 @@
 {
   "name": "gridfolio",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A simple, stylish, responsive, and customizable grid-based portfolio library.",
   "main": "dist/gridfolio.js",
   "scripts": {

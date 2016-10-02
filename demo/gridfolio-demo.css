@@ -89,6 +89,7 @@ button:hover {
   border: 1px solid #333;
   background-color: #fff;
   color: #000;
+  margin: 3px 0;
 }
 
 .themes button:hover {
