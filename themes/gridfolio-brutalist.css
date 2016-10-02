@@ -4,6 +4,25 @@
   padding: 10%;
 }
 
+.gridfolio[data-theme="brutalist"] .gridfolio--block-content,
+.gridfolio[data-theme="brutalist"] .gridfolio--block-title {
+  transition: transform 0.4s ease-in-out;
+  -webkit-transition: transform 0.4s ease-in-out;
+  -moz-transition: transform 0.4s ease-in-out;
+}
+
+.gridfolio[data-theme="brutalist"] .gridfolio--block-content:hover {
+  transform: rotateZ(5deg);
+  -webkit-transform: rotateZ(5deg);
+  -moz-transform: rotateZ(5deg);
+}
+
+.gridfolio[data-theme="brutalist"] .gridfolio--block-content:hover .gridfolio--block-title {
+  transform: rotateZ(-10deg);
+  -webkit-transform: rotateZ(-10deg);
+  -moz-transform: rotateZ(-10deg);
+}
+
 .gridfolio[data-theme="brutalist"] .gridfolio--block-title-wrapper {
   font-size: 50px;
 }
