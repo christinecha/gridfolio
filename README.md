@@ -108,7 +108,7 @@ There's a small collection of images and colors in the file `themes/gridfolio-te
 ### Themes
 
 Import whatever CSS theme file you want (after the base one, of course), and then just tack on the theme in your Gridfolio config.
-````
+````html
 <head>
   <link href="/your_path/dist/gridfolio.css" rel="stylesheet" type="text/css">
 
