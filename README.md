@@ -40,6 +40,9 @@ Alternatively, you can install via npm.
 $ npm i --save gridfolio
 ```
 
+**Quick Start:** start from the boilerplate files here: https://github.com/christinecha/gridfolio/tree/master/boilerplate
+
+
 ## Usage
 
 ````js
