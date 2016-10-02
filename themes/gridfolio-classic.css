@@ -1,0 +1,25 @@
+.gridfolio[data-theme="classic"] .gridfolio--block-content {
+  padding: 30px;
+}
+
+.gridfolio[data-theme="classic"] .gridfolio--block-title {
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.06em;
+  margin-bottom: 20px;
+}
+
+.gridfolio[data-theme="classic"] .gridfolio--block-description-wrapper {
+  font-size: 10px;
+}
+
+.gridfolio[data-theme="classic"] .gridfolio--block-description {
+  font-weight: 100;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+}
+
+.gridfolio[data-theme="classic"] .gridfolio--block-tags-wrapper {
+  font-size: 6px;
+  letter-spacing: 0.2em;
+}

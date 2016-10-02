@@ -10,11 +10,12 @@ body {
 }
 
 .code {
+  display: none;
+
   padding: 10px 12px;
   margin: 20px 0;
   border-radius: 3px;
 
-  display: inline-block;
   vertical-align: middle;
 
   background-color: #333;
@@ -23,8 +24,13 @@ body {
   font-family: monospace;
 }
 
+@media (min-width: 650px) {
+  .code { display: inline-block; }
+}
+
 button {
   padding: 11px 12px;
+  margin: 20px 0;
   border-radius: 3px;
 
   display: inline-block;

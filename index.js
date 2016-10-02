@@ -1,12 +1,12 @@
 // Here is an example of configuring a Gridfolio with all the possible properties.
 
 var themes = [
-  'classy-af',
+  'classic',
   'warhol',
 ]
 
 var textures = {
-  'classy-af': [
+  'classic': [
     'dark-bg black-texture-1',
     'dark-bg black-texture-2',
     'dark-bg black-texture-3',
