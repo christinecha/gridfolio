@@ -109,6 +109,7 @@ class Gridfolio {
 
     this.$container.appendChild(this.$grid)
 
+    if (this.options.theme) this.$grid.setAttribute('data-theme', this.options.theme)
     if (this.options.animateIntoView) this.$grid.classList.add('animates-into-view')
   }
 
