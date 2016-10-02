@@ -4,12 +4,18 @@
 
 .gridfolio[data-theme="warhol"] .gridfolio--block-title-wrapper {
   font-size: 45px;
+  margin-bottom: 20px;
 }
 
 .gridfolio[data-theme="warhol"] .gridfolio--block-title {
   font-family: 'Arial', sans-serif;
   letter-spacing: 0.06em;
-  margin-bottom: 20px;
+}
+
+.gridfolio[data-theme="warhol"] .gridfolio--block-content:hover .gridfolio--block-title {
+  display: inline;
+  background: #000;
+  box-shadow: 10px 0 0 #000, -10px 0 0 #000;
 }
 
 .gridfolio[data-theme="warhol"] .gridfolio--block-description-wrapper {

@@ -1,5 +1,13 @@
 .gridfolio[data-theme="classic"] .gridfolio--block-content {
   padding: 30px;
+
+  transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+}
+
+.gridfolio[data-theme="classic"] .gridfolio--block-content:hover {
+  opacity: 0.5;
 }
 
 .gridfolio[data-theme="classic"] .gridfolio--block-title {

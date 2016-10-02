@@ -2,6 +2,16 @@
   border-radius: 100%;
   text-align: center;
   padding: 10%;
+
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+}
+
+.gridfolio[data-theme="circular"] .gridfolio--block-content:hover {
+  transform: scale3d(1.05,1.05,1);
+  -webkit-transform: scale3d(1.05,1.05,1);
+  -moz-transform: scale3d(1.05,1.05,1);
 }
 
 .gridfolio[data-theme="circular"] .gridfolio--block-title-wrapper {

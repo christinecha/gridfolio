@@ -37,6 +37,9 @@ a {
 
   transition: transform 0.4s ease-in-out 0.1s,
               opacity 0.8s ease-in-out 0.1s;
+
+  -webkit-transition: opacity 0.8s ease-in-out 0.1s;
+  -moz-transition: opacity 0.8s ease-in-out 0.1s;
 }
 
 .gridfolio.animates-into-view .gridfolio--block.is-animated {
