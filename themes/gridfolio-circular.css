@@ -1,0 +1,43 @@
+.gridfolio[data-theme="circular"] .gridfolio--block-content {
+  border-radius: 100%;
+  text-align: center;
+  padding: 10%;
+}
+
+.gridfolio[data-theme="circular"] .gridfolio--block-title-wrapper {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.gridfolio[data-theme="circular"] .gridfolio--block-title {
+  font-weight: 100;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+.gridfolio[data-theme="circular"] .gridfolio--block-description-wrapper {
+  font-size: 9px;
+}
+
+.gridfolio[data-theme="circular"] .gridfolio--block-description {
+  font-weight: 100;
+  letter-spacing: 0.03em;
+  line-height: 1.8;
+}
+
+.gridfolio[data-theme="circular"] .gridfolio--block-tags-wrapper {
+  font-size: 7px;
+  letter-spacing: 0.2em;
+  padding-bottom: 20px;
+}
+
+.gridfolio[data-theme="circular"] .gridfolio--block-tags span {
+  font-weight: 600;
+  background-color: transparent;
+}
+
+@media (min-width: 500px) {
+}
+
+@media (min-width: 900px) {
+}

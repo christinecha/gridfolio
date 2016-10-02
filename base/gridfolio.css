@@ -1,0 +1,77 @@
+/* Reset */
+* {
+  margin: 0 0;
+  padding: 0 0;
+  border: none;
+  font-family: 'Work', 'Helvetica', sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* Gridfolio Base Styles */
+.gridfolio {
+  width: 100%;
+
+  /* This offsets the padding below in .gridfolio--block. */
+  margin: 0 -10px;
+}
+
+.gridfolio--block {
+  display: inline-block;
+  vertical-align: middle;
+
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.gridfolio.animates-into-view .gridfolio--block {
+  opacity: 0;
+  transform: translate3d(0,30px,0);
+
+  transition: transform 0.4s ease-in-out 0.1s,
+              opacity 0.8s ease-in-out 0.1s;
+}
+
+.gridfolio.animates-into-view .gridfolio--block.is-animated {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+.gridfolio--block-content {
+  width: 100%;
+  height: 100%;
+
+  box-sizing: border-box;
+  padding: 10px;
+
+  background-color: #eee;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.gridfolio--block-title-wrapper {
+  font-size: 16px;
+}
+
+.gridfolio--block-description-wrapper {
+  font-size: 12px;
+}
+
+.gridfolio--block-tags-wrapper {
+  font-size: 8px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+
+  margin-top: auto;
+}
+
+.gridfolio--block-tags span {
+  background-color: #fff;
+
+  padding: 3px;
+  margin: 0 3px;
+}

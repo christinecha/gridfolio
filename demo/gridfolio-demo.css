@@ -1,0 +1,95 @@
+/** SHARED **/
+
+body {
+  padding: 5%;
+}
+
+.xsmall {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.code {
+  padding: 10px 12px;
+  margin: 20px 0;
+  border-radius: 3px;
+
+  display: inline-block;
+  vertical-align: middle;
+
+  background-color: #333;
+  color: white;
+
+  font-family: monospace;
+}
+
+button {
+  padding: 11px 12px;
+  border-radius: 3px;
+
+  display: inline-block;
+  vertical-align: middle;
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+
+  background-color: #31cad9;
+  color: white;
+
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out;
+}
+
+button:hover {
+  background-color: #3977d1;
+}
+
+/** INTRO **/
+
+.intro {
+  margin-bottom: 50px;
+}
+
+.title {
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.themes {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 0;
+  margin-top: 10px;
+}
+
+.themes p {
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin-bottom: 15px;
+}
+
+.themes button {
+  border: 1px solid #333;
+  background-color: #fff;
+  color: #000;
+}
+
+.themes button:hover {
+  opacity: 0.6;
+}
+
+.themes button.selected {
+  background-color: #333;
+  color: #fff;
+}

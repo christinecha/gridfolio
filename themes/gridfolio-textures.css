@@ -1,0 +1,60 @@
+.gridfolio--block .gridfolio--block-content {
+  background-size: cover;
+}
+
+.gridfolio--block.dark-bg .gridfolio--block-content {
+  color: #fff;
+}
+
+.gridfolio--block.dark-bg .gridfolio--block-tags span {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/** TEXTURES **/
+
+/* BLACK */
+.gridfolio--block.black-texture-1 .gridfolio--block-content {
+  background-image: url(../assets/black-texture-1.jpg);
+}
+
+.gridfolio--block.black-texture-2 .gridfolio--block-content {
+  background-image: url(../assets/black-texture-2.jpg);
+}
+
+.gridfolio--block.black-texture-3 .gridfolio--block-content {
+  background-image: url(../assets/black-texture-3.jpg);
+}
+
+/* WHITE */
+.gridfolio--block.white-texture-1 .gridfolio--block-content {
+  background-image: url(../assets/white-texture-1.jpg);
+}
+
+.gridfolio--block.white-texture-2 .gridfolio--block-content {
+  background-image: url(../assets/white-texture-2.jpg);
+}
+
+.gridfolio--block.white-texture-3 .gridfolio--block-content {
+  background-image: url(../assets/white-texture-3.jpg);
+}
+
+/* SOLID COLORS */
+.gridfolio--block.solid-blue .gridfolio--block-content {
+  background-color: #00aeef;
+}
+
+.gridfolio--block.solid-yellow .gridfolio--block-content {
+  background-color: #ffc82b;
+}
+
+.gridfolio--block.solid-pink .gridfolio--block-content {
+  background-color: #ff4198;
+}
+
+.gridfolio--block.solid-red .gridfolio--block-content {
+  background-color: #ff5341;
+}
+
+.gridfolio--block.solid-green .gridfolio--block-content {
+  background-color: #8ed51e;
+}
