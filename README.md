@@ -26,7 +26,7 @@ The easiest way to start is to just clone the repo. Then, of course, you can pic
 $ git clone https://github.com/christinecha/gridfolio.git
 ```
 
-Next, let's see how to use this in your own project. First, include the script and the base CSS in your HTML.
+Next, include the script and the base CSS in your HTML.
 
 ````html
   <link href="/your_path/dist/gridfolio.css" rel="stylesheet" type="text/css">
@@ -35,9 +35,12 @@ Next, let's see how to use this in your own project. First, include the script a
   <script src="/your_path/dist/gridfolio.js"></script>
 ````
 
-## Usage
+Alternatively, you can install via npm.
+```
+$ npm i --save gridfolio
+```
 
-Now you'll have access to the `Gridfolio` class, which can be used thusly:
+## Usage
 
 ````js
 var gridfolio = new Gridfolio({
@@ -93,21 +96,26 @@ var gridfolio = new Gridfolio({
 })
 ````
 
-Isn't that easy?
-
-... well, if it isn't, let me know. :) Have fun!!!
-
 
 ## Special Features
 
-Let's talk about some more fancy shit. THEMES! That's right, I built some simple CSS themes for y'all, and it's **so easy** to implement (or make your own).
+### Textures
 
+There's a small collection of images and colors in the file `themes/gridfolio-textures.css`. You must include this file if you're using certain themes (like `warhol` and `classic`). It's just setting background imagery.
+
+
+
+### Themes
 
 Import whatever CSS theme file you want (after the base one, of course), and then just tack on the theme in your Gridfolio config.
 ````
 <head>
   <link href="/your_path/dist/gridfolio.css" rel="stylesheet" type="text/css">
+
+  /* ---------------------- Import the relevant theme CSS here --------------------- */
   <link href="/your_path/themes/gridfolio-warhol.css" rel="stylesheet" type="text/css">
+  /* ------------------------------------------------------------------------------- */
+
 </head>
 
 <body>
@@ -121,7 +129,12 @@ Import whatever CSS theme file you want (after the base one, of course), and the
         animateIntoView: true,
         breakpoints: [ /* your breakpoints */ ],
         scaleFonts: true,
+
+        /* ---- Declare your theme here --- */
+        // This string gets passed to .gridfolio as an attribute, called 'data-theme'.
+
         theme: 'warhol'
+        /* -------------------------------- */
       },
       blocks: [ /* your data */ ]
     })
@@ -129,9 +142,7 @@ Import whatever CSS theme file you want (after the base one, of course), and the
 </body>
 ````
 
-The config finds the DOM Element `.gridfolio` and sets attribute `'data-theme'` to `'warhol'`. And then, if you look in `gridfolio-warhol.css`, you'll see we're using that tag to set styles.
-
-**Which means that you can actually set 'theme' to whatever name you want, and then implement your own theme with custom CSS suuuuuper easily.**
+If you look in `gridfolio-warhol.css`, you'll see we're using that tag to set styles. **This means that you can actually set 'theme' to whatever name you want, and then implement your own theme with custom CSS suuuuuper easily.**
 
 <3 - CHA
 
