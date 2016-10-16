@@ -88,7 +88,7 @@ var gridfolio = new Gridfolio({
     {
       title: 'Project Title',
       description: 'My project is awesome.',
-      url: 'http://christinecha.github.io/gridfolio/'
+      url: 'http://christinecha.github.io/gridfolio/',
       tags: ['html', 'css', 'javascript'],
 
       // Whatever you enter here gets tacked on to the 'gridfolio--block' classname.
